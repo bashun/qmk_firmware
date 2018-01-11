@@ -18,7 +18,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Keymap 0: Basic layer
  *
  * ,--------------------------------------------------.           ,--------------------------------------------------.
- * | ~`     |   1  |   2  |   3  |   4  |   5  |Win+L |           |CtAlDe|   6  |   7  |   8  |   9  |   0  |   -_    |
+ * | ~`     |   1  |   2  |   3  |   4  |   5  |Win+L |           |CtAlDe|   6  |   7  |   8  |   9  |   0  |   -_   |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
  * | Tab    |   Q  |   W  |   E  |   R  |   T  | DEL  |           | PgUp |   Y  |   U  |   I  |   O  |   P  |   |    |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
@@ -40,7 +40,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // Otherwise, it needs KC_*
 [BASE] = KEYMAP(  // layer 0 : default
         // left hand
-        KC_TILD,        KC_1,         KC_2,   KC_3,   KC_4,   KC_5,   LGUI(KC_L),
+        KC_GRV,         KC_1,         KC_2,   KC_3,   KC_4,   KC_5,   LGUI(KC_L),
         KC_TAB,         KC_Q,         KC_W,   KC_E,   KC_R,   KC_T,   KC_DELT,
         KC_LCTL,        KC_A,         KC_S,   KC_D,   KC_F,   KC_G,
         KC_LSFT,        KC_Z,         KC_X,   KC_C,   KC_V,   KC_B,   KC_PSCR,
@@ -49,14 +49,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                       ,
                                                       KC_SPC,KC_BSPC,,
         // right hand
-             RCTL(RALT(KC_DELT)),KC_6,   KC_7,  KC_8,   KC_9,   KC_0,    KC_MINS,
-             KC_PGUP,            KC_Y,   KC_U,  KC_I,   KC_O,   KC_P,    KC_LBRC,
-                                 KC_H,   KC_J,  KC_K,   KC_L,   KC_SCLN, KC_QUOT,
-             KC_PGDN,            KC_N,   KC_M,  KC_COMM,KC_DOT, KC_SLSH, KC_EQL,
-             LT(MDIA,KC_GRV), KC_LEFT,KC_DOWN,KC_UP, KC_RGHT,
-             ,,
-             ,
-             ,,KC_ENT
+        RCTL(RALT(KC_DELT)),KC_6,   KC_7,  KC_8,   KC_9,   KC_0,    KC_MINS,
+        KC_PGUP,            KC_Y,   KC_U,  KC_I,   KC_O,   KC_P,    KC_BSLS,
+                            KC_H,   KC_J,  KC_K,   KC_L,   KC_SCLN, KC_QUOT,
+        KC_PGDN,            KC_N,   KC_M,  KC_COMM,KC_DOT, KC_SLSH, KC_EQL,
+        LT(MDIA,KC_GRV), KC_LEFT,KC_DOWN,KC_UP, KC_RGHT,
+        ,,
+        ,
+        ,,KC_ENT
     ),
 /* Keymap 1: Symbol Layer
  *
@@ -93,7 +93,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        // right hand
        KC_TRNS, KC_F6,   KC_F7,  KC_F8,   KC_F9,   KC_F10,  KC_F11,
        KC_TRNS, KC_TRNS, KC_TRNS,KC_UP,   KC_TRNS, KC_TRNS, KC_F12,
-                KC_TRNS, KC_LEFT,KC_DOWN, KC_RGHT, KC_RBRC, KC_BSLS,
+                KC_TRNS, KC_LEFT,KC_DOWN, KC_RGHT, KC_RBRC, KC_LBRC,
        KC_TRNS, KC_TRNS, KC_TRNS,KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
                          KC_TRNS,KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
        KC_TRNS, KC_TRNS,
